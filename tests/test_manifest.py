@@ -13,7 +13,7 @@ def test_manifest_contents(cfg):
     assert m["protocol_fingerprint"] == cfg.protocol_fingerprint()
     assert m["environment"]["packages"]["mini-swe-agent"] == "2.4.6"
     assert m["config"]["budgets"]["primary"]["wallclock_minutes"] == cfg.budgets.primary.wallclock_minutes
-    assert m["protocol_doc_sha256"] and m["decisions_doc_sha256"]
+    assert m["protocol_doc_sha256"]
     json.dumps(m)  # serialisable
 
 

@@ -43,7 +43,7 @@ def main() -> int:
     record = select_tasks(tasks, seed=ts.seed, n_hard=ts.n_hard, n_nonhard=ts.n_nonhard, gate=gate, parallel=args.parallel)
     out = Path(args.out)
     if out.exists():
-        raise SystemExit(f"{out} exists: the task list is frozen; a new list needs a new file and a decisions.md entry")
+        raise SystemExit(f"{out} exists: the task list is frozen; a new list needs a new file")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(record, indent=2))
     log.info(f"selected {len(record['task_ids'])} tasks -> {out}")

@@ -2,7 +2,7 @@
 
 ``runs/<experiment_id>/manifest.json`` is written once. Later sessions (resume) must have the same
 protocol fingerprint; otherwise the run refuses to start, so a protocol change cannot slip silently into an
-existing experiment (it needs a new experiment id and a decisions.md entry). Every session is appended to
+existing experiment (it needs a new experiment id). Every session is appended to
 ``manifest_sessions.jsonl``.
 """
 
@@ -93,7 +93,7 @@ def build_manifest(
         "created_at": utc_now(),
         "protocol_fingerprint": cfg.protocol_fingerprint(),
         "protocol_doc_sha256": _sha_or_none(project_root / "docs" / "experiment_protocol.md"),
-        "decisions_doc_sha256": _sha_or_none(project_root / "docs" / "decisions.md"),
+        "decisions_doc_sha256": None,
         "project_git": git_info(project_root),
         "config": cfg.resolved_dict(),
         "environment": environment_info(),
@@ -109,7 +109,7 @@ def _sha_or_none(p: Path) -> str | None:
 def amend_manifest(experiment_dir: Path, manifest: dict[str, Any], decision: str, reason: str) -> Path:
     """Accept a new protocol fingerprint for an existing experiment, explicitly and on the record.
 
-    Only for changes documented in docs/decisions.md under ``decision``; the previous fingerprint, the decision id
+    Only for documented changes; the previous fingerprint, the change id
     and the reason are kept in ``amendments``. Runs record the fingerprint they ran under, so analyses can tell
     which runs preceded the amendment.
     """
@@ -138,8 +138,7 @@ def write_manifest(experiment_dir: Path, manifest: dict[str, Any]) -> Path:
         if existing["protocol_fingerprint"] != manifest["protocol_fingerprint"]:
             raise ManifestMismatch(
                 f"{path} was created with protocol fingerprint {existing['protocol_fingerprint']}, current config "
-                f"has {manifest['protocol_fingerprint']}. Use a new experiment id and record the change in "
-                "docs/decisions.md."
+                f"has {manifest['protocol_fingerprint']}. Use a new experiment id."
             )
     else:
         tmp = path.with_suffix(".json.tmp")

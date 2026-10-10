@@ -1,12 +1,10 @@
 # Experiment Protocol — Failure-Conditioned Recovery and Failure Complementarity
 
 **Status:** V0 protocol, created 2026-10-06 from the project specification.
-**This document is the scientific source of truth.** Implementation must conform to it. It may only change
-through an entry in [`decisions.md`](decisions.md) (with date and reason). Simplifying the implementation is
-not a valid reason to change it.
+**This document is the scientific source of truth.** Implementation must conform to it.
+Simplifying the implementation is not a valid reason to change it.
 
-Sections 1–12 restate the specification. Section 13 lists the binding of the protocol to concrete tooling;
-those bindings are implementation choices, each justified in `decisions.md`.
+Sections 1–12 restate the specification. Section 13 lists the binding of the protocol to concrete tooling.
 
 ---
 
@@ -93,7 +91,6 @@ workspace, the observable repository state, and tests/errors obtainable by runni
 The exact text is versioned in `configs/prompts/` (prompt version recorded with every run).
 
 Condition C (Repo_0 control) uses the **primary** prompt, since there is no previous attempt to describe.
-(See `decisions.md` D-010.)
 
 ## 7. Exact checkpointing
 
@@ -163,15 +160,13 @@ Integrity rules (non-negotiable):
 7. Never discard failed trajectories.
 8. Never replace an infra failure with a task failure.
 9. Never reuse a modified recovery workspace across conditions.
-10. Never change the experimental protocol without recording the change in `decisions.md` with reason and date.
+10. Never change the experimental protocol without recording the change with reason and date.
 
 ---
 
 ## 13. Implementation binding (V0)
 
-Each item is justified in `decisions.md`.
-
-| Protocol element | V0 binding | Decision |
+| Protocol element | V0 binding | Item |
 |---|---|---|
 | Benchmark | SWE-bench Pro V2 **v2.0.0**, repo `scaleapi/SWE-bench_Pro-os` @ `66f92766bba6…`, tasks from `v2/tasks/` (Harbor format), HARD-51 from `v2/hard51_ids.txt` | D-001 |
 | Container runtime | Apptainer (no Docker on the cluster); GHCR images converted to SIF, image digest recorded | D-002 |

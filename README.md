@@ -36,7 +36,6 @@ src/failure_complementarity/   config, run manifest, sandbox, branch runner, eva
 scripts/                       run_stage / worker / select_tasks / summarize_*; slurm/ job scripts; dev/ fake endpoint
 configs/                       experiment definitions (pilot_v0 … pilot_v2, replicates), agents, budgets, prompts, frozen task lists
 docs/experiment_protocol.md    the scientific protocol (source of truth)
-docs/decisions.md              dated decision log D-001 … D-036: every deviation and every bug that touched the data
 docs/environment.md            versions, hardware, serving commands;  env/*.lock.txt  exact package locks
 results/data/branches.csv      one row per recorded agent run (2,110)
 results/data/headline_numbers.json   every number quoted in the write-up
@@ -100,7 +99,7 @@ next steps (see the write-up). Please get in touch: <dyang06@wm.edu>.
 ## AI assistance
 
 The code, the analysis scripts and the first drafts of the documents were produced with the help of Claude (Anthropic),
-working inside Claude Code under my direction. The experimental design, the decisions recorded in `docs/decisions.md`
+working inside Claude Code under my direction. The experimental design, the methodological choices
 and the interpretation are mine; I take responsibility for any errors.
 
 ## Citation
