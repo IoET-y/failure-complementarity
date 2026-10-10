@@ -1,0 +1,160 @@
+# Model registry. The runner only requires an OpenAI-compatible endpoint; the `serve` block is used solely by
+# scripts/serve_model.sh. Add a model = add an entry here (no code change).
+# Model IDs and revisions verified against the Hugging Face API on 2026-10-06 (see docs/environment.md).
+agents:
+  qwen:
+    display_name: Qwen3-Coder-30B-A3B-Instruct-FP8
+    provider: openai_compatible
+    base_url: ${FC_QWEN_BASE_URL:-http://127.0.0.1:8001/v1}
+    api_key_env: FC_QWEN_API_KEY          # unset -> "EMPTY" (vLLM without --api-key)
+    model: Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8   # must equal the server's served model name
+    hf_repo: Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8   # official FP8 release (D-020)
+    hf_revision: dcaee4d4dfc5ee71ad501f01f530e5652438fde0
+    sampling:                             # model card / generation_config.json (decision D-008)
+      temperature: 0.7
+      top_p: 0.8
+      top_k: 20
+      repetition_penalty: 1.05
+    serve:
+      engine: vllm
+      port: 8001
+      tensor_parallel_size: 1   # one H100 per model (D-020)
+      max_model_len: 131072
+      gpu_memory_utilization: 0.90
+      extra_args: [--enable-auto-tool-choice, --tool-call-parser, qwen3_coder]
+
+  devstral:
+    display_name: Devstral-Small-2-24B-Instruct-2512
+    provider: openai_compatible
+    base_url: ${FC_DEVSTRAL_BASE_URL:-http://127.0.0.1:8002/v1}
+    api_key_env: FC_DEVSTRAL_API_KEY
+    model: mistralai/Devstral-Small-2-24B-Instruct-2512
+    hf_repo: mistralai/Devstral-Small-2-24B-Instruct-2512
+    hf_revision: 55c5b41e98c2dbd21b0c8afffc540dcfc9eb5128   # official release is FP8
+    sampling:
+      temperature: 0.15
+    serve:
+      engine: vllm
+      port: 8002
+      tensor_parallel_size: 1   # one H100 per model (D-020)
+      max_model_len: 131072
+      gpu_memory_utilization: 0.90
+      extra_args: [--enable-auto-tool-choice, --tool-call-parser, mistral]
+
+  # ---- screening candidates for a capability-matched pair (D-027, D-028: single H100 where possible) ----
+  qwen3next:
+    display_name: Qwen3-Coder-Next-FP8
+    provider: openai_compatible
+    base_url: ${FC_QWEN3NEXT_BASE_URL:-http://127.0.0.1:8003/v1}
+    api_key_env: FC_QWEN3NEXT_API_KEY
+    model: Qwen/Qwen3-Coder-Next-FP8
+    hf_repo: Qwen/Qwen3-Coder-Next-FP8               # official FP8 release
+    hf_revision: da6e2ed27304dd39abadd9c82ef50e8de67bdd4c
+    sampling:                                       # model card: temperature 1.0, top_p 0.95, top_k 40
+      temperature: 1.0
+      top_p: 0.95
+      top_k: 40
+    serve:
+      engine: vllm
+      port: 8003
+      tensor_parallel_size: 2
+      max_model_len: 131072
+      gpu_memory_utilization: 0.90
+      extra_args: [--enable-auto-tool-choice, --tool-call-parser, qwen3_coder]
+
+  gptoss120b:
+    display_name: gpt-oss-120b
+    provider: openai_compatible
+    base_url: ${FC_GPTOSS_BASE_URL:-http://127.0.0.1:8004/v1}
+    api_key_env: FC_GPTOSS_API_KEY
+    model: openai/gpt-oss-120b
+    hf_repo: openai/gpt-oss-120b                     # native MXFP4 release
+    hf_revision: b5c939de8f754692c1647ca79fbf85e8c1e70f8a
+    sampling:                                       # no sampling defaults published; OpenAI: temperature 1.0, top_p 1.0
+      temperature: 1.0
+      top_p: 1.0
+    serve:
+      engine: vllm
+      port: 8004
+      tensor_parallel_size: 1   # D-028: 65 GB MXFP4 fits one H100 at 0.95
+      max_model_len: 131072
+      gpu_memory_utilization: 0.95
+      extra_args: [--enable-auto-tool-choice, --tool-call-parser, openai]
+
+  glm47flash:
+    display_name: GLM-4.7-Flash
+    provider: openai_compatible
+    base_url: ${FC_GLM47_BASE_URL:-http://127.0.0.1:8005/v1}
+    api_key_env: FC_GLM47_API_KEY
+    model: zai-org/GLM-4.7-Flash
+    hf_repo: zai-org/GLM-4.7-Flash                   # official BF16 release
+    hf_revision: 7dd20894a642a0aa287e9827cb1a1f7f91386b67
+    sampling:                                       # model card, "Terminal Bench, SWE Bench Verified" settings
+      temperature: 0.7
+      top_p: 1.0
+    serve:
+      engine: vllm
+      port: 8005
+      tensor_parallel_size: 1   # D-028: 62 GB BF16; MLA KV (~54 KB/token) leaves room for >131k tokens
+      max_model_len: 131072
+      gpu_memory_utilization: 0.92
+      extra_args: [--enable-auto-tool-choice, --tool-call-parser, glm47, --reasoning-parser, glm45]
+
+  qwen36moe:
+    display_name: Qwen3.6-35B-A3B-FP8
+    provider: openai_compatible
+    base_url: ${FC_QWEN36MOE_BASE_URL:-http://127.0.0.1:8006/v1}
+    api_key_env: FC_QWEN36MOE_API_KEY
+    model: Qwen/Qwen3.6-35B-A3B-FP8
+    hf_repo: Qwen/Qwen3.6-35B-A3B-FP8                # official FP8 release (thinking model, default mode)
+    hf_revision: 95a723d08a9490559dae23d0cff1d9466213d989
+    sampling:                                       # model card SWE-bench settings / generation_config.json
+      temperature: 1.0
+      top_p: 0.95
+      top_k: 20
+    serve:
+      engine: vllm
+      port: 8006
+      tensor_parallel_size: 1
+      max_model_len: 131072
+      gpu_memory_utilization: 0.90
+      extra_args: [--enable-auto-tool-choice, --tool-call-parser, qwen3_coder, --reasoning-parser, qwen3, --language-model-only, --max-num-seqs, "64"]   # hybrid attention: default 1024 seqs exceed mamba cache blocks; we use <= 4
+
+  qwen36dense:
+    display_name: Qwen3.6-27B-FP8
+    provider: openai_compatible
+    base_url: ${FC_QWEN36DENSE_BASE_URL:-http://127.0.0.1:8007/v1}
+    api_key_env: FC_QWEN36DENSE_API_KEY
+    model: Qwen/Qwen3.6-27B-FP8
+    hf_repo: Qwen/Qwen3.6-27B-FP8                    # official FP8 release (thinking model, default mode)
+    hf_revision: e89b16ebf1988b3d6befa7de50abc2d76f26eb09
+    sampling:
+      temperature: 1.0
+      top_p: 0.95
+      top_k: 20
+    serve:
+      engine: vllm
+      port: 8007
+      tensor_parallel_size: 1
+      max_model_len: 131072
+      gpu_memory_utilization: 0.90
+      extra_args: [--enable-auto-tool-choice, --tool-call-parser, qwen3_coder, --reasoning-parser, qwen3, --language-model-only, --max-num-seqs, "64"]   # hybrid attention: default 1024 seqs exceed mamba cache blocks; we use <= 4
+
+  nemotron3nano:
+    display_name: NVIDIA-Nemotron-3-Nano-30B-A3B-FP8
+    provider: openai_compatible
+    base_url: ${FC_NEMOTRON_BASE_URL:-http://127.0.0.1:8008/v1}
+    api_key_env: FC_NEMOTRON_API_KEY
+    model: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8
+    hf_repo: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8   # official FP8 release (reasoning model)
+    hf_revision: 9bee19446c0dfd01f356e10979d225b2a6621944
+    sampling:                                       # model card: temperature 0.6, top_p 0.95 for tool calling
+      temperature: 0.6
+      top_p: 0.95
+    serve:
+      engine: vllm
+      port: 8008
+      tensor_parallel_size: 1
+      max_model_len: 131072
+      gpu_memory_utilization: 0.90
+      extra_args: [--enable-auto-tool-choice, --tool-call-parser, qwen3_coder, --reasoning-parser, nemotron_v3]

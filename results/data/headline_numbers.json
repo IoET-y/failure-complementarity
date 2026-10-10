@@ -1,0 +1,1436 @@
+{
+  "screening": {
+    "qwen": {
+      "solved": 9,
+      "n": 40,
+      "ci95": [
+        0.1231595325467853,
+        0.3750339640409305
+      ]
+    },
+    "devstral": {
+      "solved": 24,
+      "n": 40,
+      "ci95": [
+        0.445956198273935,
+        0.7365188938759863
+      ]
+    },
+    "qwen36moe": {
+      "solved": 31,
+      "n": 40,
+      "ci95": [
+        0.6249660359590695,
+        0.8768404674532148
+      ]
+    },
+    "qwen36dense": {
+      "solved": 32,
+      "n": 40,
+      "ci95": [
+        0.6524239261814333,
+        0.8950013502683314
+      ]
+    },
+    "glm47flash": {
+      "solved": 18,
+      "n": 40,
+      "ci95": [
+        0.30705075280944694,
+        0.6017117011155924
+      ]
+    },
+    "gptoss120b": {
+      "solved": 3,
+      "n": 40,
+      "ci95": [
+        0.025835556771858226,
+        0.19864530159097524
+      ]
+    },
+    "nemotron3nano": {
+      "solved": 4,
+      "n": 40,
+      "ci95": [
+        0.03957888759557486,
+        0.23052074380473897
+      ]
+    }
+  },
+  "screening_pairs": {
+    "qwen|devstral": {
+      "n": 40,
+      "both": 9,
+      "only_a": 0,
+      "only_b": 15,
+      "neither": 16,
+      "mcnemar_p": 6.103515625e-05
+    },
+    "qwen|qwen36moe": {
+      "n": 40,
+      "both": 9,
+      "only_a": 0,
+      "only_b": 22,
+      "neither": 9,
+      "mcnemar_p": 4.76837158203125e-07
+    },
+    "qwen|qwen36dense": {
+      "n": 40,
+      "both": 9,
+      "only_a": 0,
+      "only_b": 23,
+      "neither": 8,
+      "mcnemar_p": 2.384185791015625e-07
+    },
+    "qwen|glm47flash": {
+      "n": 40,
+      "both": 7,
+      "only_a": 2,
+      "only_b": 11,
+      "neither": 20,
+      "mcnemar_p": 0.0224609375
+    },
+    "devstral|qwen36moe": {
+      "n": 40,
+      "both": 23,
+      "only_a": 1,
+      "only_b": 8,
+      "neither": 8,
+      "mcnemar_p": 0.0390625
+    },
+    "devstral|qwen36dense": {
+      "n": 40,
+      "both": 21,
+      "only_a": 3,
+      "only_b": 11,
+      "neither": 5,
+      "mcnemar_p": 0.057373046875
+    },
+    "devstral|glm47flash": {
+      "n": 40,
+      "both": 16,
+      "only_a": 8,
+      "only_b": 2,
+      "neither": 14,
+      "mcnemar_p": 0.109375
+    },
+    "qwen36moe|qwen36dense": {
+      "n": 40,
+      "both": 27,
+      "only_a": 4,
+      "only_b": 5,
+      "neither": 4,
+      "mcnemar_p": 1.0
+    },
+    "qwen36moe|glm47flash": {
+      "n": 40,
+      "both": 17,
+      "only_a": 14,
+      "only_b": 1,
+      "neither": 8,
+      "mcnemar_p": 0.0009765625
+    },
+    "qwen36dense|glm47flash": {
+      "n": 40,
+      "both": 17,
+      "only_a": 15,
+      "only_b": 1,
+      "neither": 7,
+      "mcnemar_p": 0.000518798828125
+    }
+  },
+  "pilot_v2_primary": {
+    "devstral": {
+      "all": [
+        17,
+        60
+      ],
+      "hard": [
+        0,
+        20
+      ],
+      "nonhard": [
+        17,
+        40
+      ]
+    },
+    "glm47flash": {
+      "all": [
+        16,
+        60
+      ],
+      "hard": [
+        1,
+        20
+      ],
+      "nonhard": [
+        15,
+        40
+      ]
+    }
+  },
+  "pilot_v2_failures": {
+    "devstral": 43,
+    "glm47flash": 44
+  },
+  "pilot_v2_pair_2x2": {
+    "both": 10,
+    "only_devstral": 7,
+    "only_glm": 6,
+    "neither": 37
+  },
+  "pilot_v2_pooled": {
+    "all": {
+      "devstral": {
+        "n_failed_tasks": 43,
+        "table": {
+          "V0 devstral->devstral": {
+            "k": 18,
+            "n": 129,
+            "rate": 0.13953488372093023,
+            "per_replicate": [
+              [
+                7,
+                43
+              ],
+              [
+                6,
+                43
+              ],
+              [
+                5,
+                43
+              ]
+            ]
+          },
+          "note devstral->devstral": {
+            "k": 17,
+            "n": 129,
+            "rate": 0.13178294573643412,
+            "per_replicate": [
+              [
+                6,
+                43
+              ],
+              [
+                5,
+                43
+              ],
+              [
+                6,
+                43
+              ]
+            ]
+          },
+          "Repo0 devstral": {
+            "k": 22,
+            "n": 129,
+            "rate": 0.17054263565891473,
+            "per_replicate": [
+              [
+                7,
+                43
+              ],
+              [
+                8,
+                43
+              ],
+              [
+                7,
+                43
+              ]
+            ]
+          },
+          "V0 devstral->glm47flash": {
+            "k": 13,
+            "n": 129,
+            "rate": 0.10077519379844961,
+            "per_replicate": [
+              [
+                3,
+                43
+              ],
+              [
+                3,
+                43
+              ],
+              [
+                7,
+                43
+              ]
+            ]
+          },
+          "note devstral->glm47flash": {
+            "k": 15,
+            "n": 129,
+            "rate": 0.11627906976744186,
+            "per_replicate": [
+              [
+                5,
+                43
+              ],
+              [
+                5,
+                43
+              ],
+              [
+                5,
+                43
+              ]
+            ]
+          },
+          "Repo0 glm47flash": {
+            "k": 23,
+            "n": 129,
+            "rate": 0.17829457364341086,
+            "per_replicate": [
+              [
+                5,
+                43
+              ],
+              [
+                11,
+                43
+              ],
+              [
+                7,
+                43
+              ]
+            ]
+          }
+        }
+      },
+      "glm47flash": {
+        "n_failed_tasks": 44,
+        "table": {
+          "V0 glm47flash->devstral": {
+            "k": 22,
+            "n": 132,
+            "rate": 0.16666666666666666,
+            "per_replicate": [
+              [
+                8,
+                44
+              ],
+              [
+                6,
+                44
+              ],
+              [
+                8,
+                44
+              ]
+            ]
+          },
+          "note glm47flash->devstral": {
+            "k": 18,
+            "n": 132,
+            "rate": 0.13636363636363635,
+            "per_replicate": [
+              [
+                6,
+                44
+              ],
+              [
+                6,
+                44
+              ],
+              [
+                6,
+                44
+              ]
+            ]
+          },
+          "Repo0 devstral": {
+            "k": 27,
+            "n": 132,
+            "rate": 0.20454545454545456,
+            "per_replicate": [
+              [
+                9,
+                44
+              ],
+              [
+                9,
+                44
+              ],
+              [
+                9,
+                44
+              ]
+            ]
+          },
+          "V0 glm47flash->glm47flash": {
+            "k": 13,
+            "n": 132,
+            "rate": 0.09848484848484848,
+            "per_replicate": [
+              [
+                1,
+                44
+              ],
+              [
+                9,
+                44
+              ],
+              [
+                3,
+                44
+              ]
+            ]
+          },
+          "note glm47flash->glm47flash": {
+            "k": 16,
+            "n": 132,
+            "rate": 0.12121212121212122,
+            "per_replicate": [
+              [
+                8,
+                44
+              ],
+              [
+                4,
+                44
+              ],
+              [
+                4,
+                44
+              ]
+            ]
+          },
+          "Repo0 glm47flash": {
+            "k": 25,
+            "n": 132,
+            "rate": 0.1893939393939394,
+            "per_replicate": [
+              [
+                6,
+                44
+              ],
+              [
+                11,
+                44
+              ],
+              [
+                8,
+                44
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "hard": {
+      "devstral": {
+        "n_failed_tasks": 20,
+        "table": {
+          "V0 devstral->devstral": {
+            "k": 4,
+            "n": 60,
+            "rate": 0.06666666666666667,
+            "per_replicate": [
+              [
+                2,
+                20
+              ],
+              [
+                1,
+                20
+              ],
+              [
+                1,
+                20
+              ]
+            ]
+          },
+          "note devstral->devstral": {
+            "k": 4,
+            "n": 60,
+            "rate": 0.06666666666666667,
+            "per_replicate": [
+              [
+                1,
+                20
+              ],
+              [
+                2,
+                20
+              ],
+              [
+                1,
+                20
+              ]
+            ]
+          },
+          "Repo0 devstral": {
+            "k": 5,
+            "n": 60,
+            "rate": 0.08333333333333333,
+            "per_replicate": [
+              [
+                1,
+                20
+              ],
+              [
+                2,
+                20
+              ],
+              [
+                2,
+                20
+              ]
+            ]
+          },
+          "V0 devstral->glm47flash": {
+            "k": 2,
+            "n": 60,
+            "rate": 0.03333333333333333,
+            "per_replicate": [
+              [
+                1,
+                20
+              ],
+              [
+                0,
+                20
+              ],
+              [
+                1,
+                20
+              ]
+            ]
+          },
+          "note devstral->glm47flash": {
+            "k": 1,
+            "n": 60,
+            "rate": 0.016666666666666666,
+            "per_replicate": [
+              [
+                0,
+                20
+              ],
+              [
+                0,
+                20
+              ],
+              [
+                1,
+                20
+              ]
+            ]
+          },
+          "Repo0 glm47flash": {
+            "k": 4,
+            "n": 60,
+            "rate": 0.06666666666666667,
+            "per_replicate": [
+              [
+                1,
+                20
+              ],
+              [
+                2,
+                20
+              ],
+              [
+                1,
+                20
+              ]
+            ]
+          }
+        }
+      },
+      "glm47flash": {
+        "n_failed_tasks": 19,
+        "table": {
+          "V0 glm47flash->devstral": {
+            "k": 4,
+            "n": 57,
+            "rate": 0.07017543859649122,
+            "per_replicate": [
+              [
+                1,
+                19
+              ],
+              [
+                1,
+                19
+              ],
+              [
+                2,
+                19
+              ]
+            ]
+          },
+          "note glm47flash->devstral": {
+            "k": 2,
+            "n": 57,
+            "rate": 0.03508771929824561,
+            "per_replicate": [
+              [
+                0,
+                19
+              ],
+              [
+                0,
+                19
+              ],
+              [
+                2,
+                19
+              ]
+            ]
+          },
+          "Repo0 devstral": {
+            "k": 4,
+            "n": 57,
+            "rate": 0.07017543859649122,
+            "per_replicate": [
+              [
+                1,
+                19
+              ],
+              [
+                1,
+                19
+              ],
+              [
+                2,
+                19
+              ]
+            ]
+          },
+          "V0 glm47flash->glm47flash": {
+            "k": 1,
+            "n": 57,
+            "rate": 0.017543859649122806,
+            "per_replicate": [
+              [
+                0,
+                19
+              ],
+              [
+                1,
+                19
+              ],
+              [
+                0,
+                19
+              ]
+            ]
+          },
+          "note glm47flash->glm47flash": {
+            "k": 2,
+            "n": 57,
+            "rate": 0.03508771929824561,
+            "per_replicate": [
+              [
+                2,
+                19
+              ],
+              [
+                0,
+                19
+              ],
+              [
+                0,
+                19
+              ]
+            ]
+          },
+          "Repo0 glm47flash": {
+            "k": 4,
+            "n": 57,
+            "rate": 0.07017543859649122,
+            "per_replicate": [
+              [
+                1,
+                19
+              ],
+              [
+                2,
+                19
+              ],
+              [
+                1,
+                19
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "nonhard": {
+      "devstral": {
+        "n_failed_tasks": 23,
+        "table": {
+          "V0 devstral->devstral": {
+            "k": 14,
+            "n": 69,
+            "rate": 0.2028985507246377,
+            "per_replicate": [
+              [
+                5,
+                23
+              ],
+              [
+                5,
+                23
+              ],
+              [
+                4,
+                23
+              ]
+            ]
+          },
+          "note devstral->devstral": {
+            "k": 13,
+            "n": 69,
+            "rate": 0.18840579710144928,
+            "per_replicate": [
+              [
+                5,
+                23
+              ],
+              [
+                3,
+                23
+              ],
+              [
+                5,
+                23
+              ]
+            ]
+          },
+          "Repo0 devstral": {
+            "k": 17,
+            "n": 69,
+            "rate": 0.2463768115942029,
+            "per_replicate": [
+              [
+                6,
+                23
+              ],
+              [
+                6,
+                23
+              ],
+              [
+                5,
+                23
+              ]
+            ]
+          },
+          "V0 devstral->glm47flash": {
+            "k": 11,
+            "n": 69,
+            "rate": 0.15942028985507245,
+            "per_replicate": [
+              [
+                2,
+                23
+              ],
+              [
+                3,
+                23
+              ],
+              [
+                6,
+                23
+              ]
+            ]
+          },
+          "note devstral->glm47flash": {
+            "k": 14,
+            "n": 69,
+            "rate": 0.2028985507246377,
+            "per_replicate": [
+              [
+                5,
+                23
+              ],
+              [
+                5,
+                23
+              ],
+              [
+                4,
+                23
+              ]
+            ]
+          },
+          "Repo0 glm47flash": {
+            "k": 19,
+            "n": 69,
+            "rate": 0.2753623188405797,
+            "per_replicate": [
+              [
+                4,
+                23
+              ],
+              [
+                9,
+                23
+              ],
+              [
+                6,
+                23
+              ]
+            ]
+          }
+        }
+      },
+      "glm47flash": {
+        "n_failed_tasks": 25,
+        "table": {
+          "V0 glm47flash->devstral": {
+            "k": 18,
+            "n": 75,
+            "rate": 0.24,
+            "per_replicate": [
+              [
+                7,
+                25
+              ],
+              [
+                5,
+                25
+              ],
+              [
+                6,
+                25
+              ]
+            ]
+          },
+          "note glm47flash->devstral": {
+            "k": 16,
+            "n": 75,
+            "rate": 0.21333333333333335,
+            "per_replicate": [
+              [
+                6,
+                25
+              ],
+              [
+                6,
+                25
+              ],
+              [
+                4,
+                25
+              ]
+            ]
+          },
+          "Repo0 devstral": {
+            "k": 23,
+            "n": 75,
+            "rate": 0.30666666666666664,
+            "per_replicate": [
+              [
+                8,
+                25
+              ],
+              [
+                8,
+                25
+              ],
+              [
+                7,
+                25
+              ]
+            ]
+          },
+          "V0 glm47flash->glm47flash": {
+            "k": 12,
+            "n": 75,
+            "rate": 0.16,
+            "per_replicate": [
+              [
+                1,
+                25
+              ],
+              [
+                8,
+                25
+              ],
+              [
+                3,
+                25
+              ]
+            ]
+          },
+          "note glm47flash->glm47flash": {
+            "k": 14,
+            "n": 75,
+            "rate": 0.18666666666666668,
+            "per_replicate": [
+              [
+                6,
+                25
+              ],
+              [
+                4,
+                25
+              ],
+              [
+                4,
+                25
+              ]
+            ]
+          },
+          "Repo0 glm47flash": {
+            "k": 21,
+            "n": 75,
+            "rate": 0.28,
+            "per_replicate": [
+              [
+                5,
+                25
+              ],
+              [
+                9,
+                25
+              ],
+              [
+                7,
+                25
+              ]
+            ]
+          }
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "all": {
+      "HRG_V0 devstral->glm47flash": {
+        "mean": -0.03875968992248061,
+        "ci95": [
+          -0.10852713178294572,
+          0.023255813953488372
+        ],
+        "n_tasks": 43,
+        "tasks_pos": 5,
+        "tasks_neg": 8,
+        "sign_test_p": 0.5810546875
+      },
+      "HRG_note devstral->glm47flash": {
+        "mean": -0.01550387596899226,
+        "ci95": [
+          -0.09302325581395351,
+          0.06201550387596899
+        ],
+        "n_tasks": 43,
+        "tasks_pos": 5,
+        "tasks_neg": 5,
+        "sign_test_p": 1.0
+      },
+      "FTV devstral->devstral": {
+        "mean": -0.031007751937984496,
+        "ci95": [
+          -0.10852713178294575,
+          0.04651162790697674
+        ],
+        "n_tasks": 43,
+        "tasks_pos": 6,
+        "tasks_neg": 8,
+        "sign_test_p": 0.79052734375
+      },
+      "FTV devstral->glm47flash": {
+        "mean": -0.07751937984496124,
+        "ci95": [
+          -0.16279069767441867,
+          0.0
+        ],
+        "n_tasks": 43,
+        "tasks_pos": 5,
+        "tasks_neg": 9,
+        "sign_test_p": 0.4239501953125
+      },
+      "CTV devstral->devstral": {
+        "mean": -0.007751937984496121,
+        "ci95": [
+          -0.08527131782945735,
+          0.06976744186046513
+        ],
+        "n_tasks": 43,
+        "tasks_pos": 5,
+        "tasks_neg": 6,
+        "sign_test_p": 1.0
+      },
+      "CTV devstral->glm47flash": {
+        "mean": 0.015503875968992244,
+        "ci95": [
+          -0.03875968992248062,
+          0.07751937984496124
+        ],
+        "n_tasks": 43,
+        "tasks_pos": 6,
+        "tasks_neg": 5,
+        "sign_test_p": 1.0
+      },
+      "HRG_V0 glm47flash->devstral": {
+        "mean": 0.06818181818181819,
+        "ci95": [
+          2.523234146875356e-18,
+          0.14393939393939395
+        ],
+        "n_tasks": 44,
+        "tasks_pos": 9,
+        "tasks_neg": 4,
+        "sign_test_p": 0.266845703125
+      },
+      "HRG_note glm47flash->devstral": {
+        "mean": 0.015151515151515148,
+        "ci95": [
+          -0.030303030303030307,
+          0.060606060606060615
+        ],
+        "n_tasks": 44,
+        "tasks_pos": 6,
+        "tasks_neg": 4,
+        "sign_test_p": 0.75390625
+      },
+      "FTV glm47flash->glm47flash": {
+        "mean": -0.0909090909090909,
+        "ci95": [
+          -0.18181818181818185,
+          -0.007575757575757578
+        ],
+        "n_tasks": 44,
+        "tasks_pos": 6,
+        "tasks_neg": 11,
+        "sign_test_p": 0.332305908203125
+      },
+      "FTV glm47flash->devstral": {
+        "mean": -0.03787878787878788,
+        "ci95": [
+          -0.16666666666666669,
+          0.09090909090909093
+        ],
+        "n_tasks": 44,
+        "tasks_pos": 7,
+        "tasks_neg": 10,
+        "sign_test_p": 0.629058837890625
+      },
+      "CTV glm47flash->glm47flash": {
+        "mean": 0.02272727272727273,
+        "ci95": [
+          -0.053030303030303025,
+          0.10606060606060605
+        ],
+        "n_tasks": 44,
+        "tasks_pos": 6,
+        "tasks_neg": 7,
+        "sign_test_p": 1.0
+      },
+      "CTV glm47flash->devstral": {
+        "mean": -0.030303030303030318,
+        "ci95": [
+          -0.11363636363636362,
+          0.053030303030303025
+        ],
+        "n_tasks": 44,
+        "tasks_pos": 5,
+        "tasks_neg": 8,
+        "sign_test_p": 0.5810546875
+      },
+      "COMBINED FTV": {
+        "mean": -0.05938697318007665,
+        "ci95": [
+          -0.1302681992337165,
+          0.00588235294117647
+        ],
+        "n_tasks": 50
+      },
+      "COMBINED CTV": {
+        "mean": 6.380592095546877e-19,
+        "ci95": [
+          -0.044715447154471545,
+          0.04980842911877393
+        ],
+        "n_tasks": 50
+      },
+      "COMBINED HRG_V0": {
+        "mean": 0.015325670498084292,
+        "ci95": [
+          -0.041666666666666664,
+          0.07116104868913857
+        ],
+        "n_tasks": 50
+      },
+      "COMBINED HRG_note": {
+        "mean": 1.2761184191093753e-18,
+        "ci95": [
+          -0.040740740740740744,
+          0.041198501872659186
+        ],
+        "n_tasks": 50
+      }
+    },
+    "hard": {
+      "HRG_V0 devstral->glm47flash": {
+        "mean": -0.03333333333333333,
+        "ci95": [
+          -0.08333333333333333,
+          0.0
+        ],
+        "n_tasks": 20,
+        "tasks_pos": 0,
+        "tasks_neg": 2,
+        "sign_test_p": 0.5
+      },
+      "HRG_note devstral->glm47flash": {
+        "mean": -0.05,
+        "ci95": [
+          -0.16666666666666666,
+          0.03333333333333333
+        ],
+        "n_tasks": 20,
+        "tasks_pos": 1,
+        "tasks_neg": 2,
+        "sign_test_p": 1.0
+      },
+      "FTV devstral->devstral": {
+        "mean": -0.01666666666666667,
+        "ci95": [
+          -0.06666666666666668,
+          0.03333333333333333
+        ],
+        "n_tasks": 20,
+        "tasks_pos": 1,
+        "tasks_neg": 2,
+        "sign_test_p": 1.0
+      },
+      "FTV devstral->glm47flash": {
+        "mean": -0.03333333333333334,
+        "ci95": [
+          -0.1,
+          0.0
+        ],
+        "n_tasks": 20,
+        "tasks_pos": 0,
+        "tasks_neg": 1,
+        "sign_test_p": 1.0
+      },
+      "CTV devstral->devstral": {
+        "mean": 0.0,
+        "ci95": [
+          -0.05,
+          0.05
+        ],
+        "n_tasks": 20,
+        "tasks_pos": 1,
+        "tasks_neg": 1,
+        "sign_test_p": 1.0
+      },
+      "CTV devstral->glm47flash": {
+        "mean": -0.016666666666666666,
+        "ci95": [
+          -0.05,
+          0.0
+        ],
+        "n_tasks": 20,
+        "tasks_pos": 0,
+        "tasks_neg": 1,
+        "sign_test_p": 1.0
+      },
+      "HRG_V0 glm47flash->devstral": {
+        "mean": 0.05263157894736842,
+        "ci95": [
+          0.0,
+          0.14035087719298248
+        ],
+        "n_tasks": 19,
+        "tasks_pos": 2,
+        "tasks_neg": 0,
+        "sign_test_p": 0.5
+      },
+      "HRG_note glm47flash->devstral": {
+        "mean": 0.0,
+        "ci95": [
+          -0.05263157894736842,
+          0.05263157894736842
+        ],
+        "n_tasks": 19,
+        "tasks_pos": 1,
+        "tasks_neg": 1,
+        "sign_test_p": 1.0
+      },
+      "FTV glm47flash->glm47flash": {
+        "mean": -0.05263157894736842,
+        "ci95": [
+          -0.14035087719298248,
+          0.0
+        ],
+        "n_tasks": 19,
+        "tasks_pos": 0,
+        "tasks_neg": 2,
+        "sign_test_p": 0.5
+      },
+      "FTV glm47flash->devstral": {
+        "mean": 2.921639538487254e-18,
+        "ci95": [
+          -0.14035087719298248,
+          0.12280701754385966
+        ],
+        "n_tasks": 19,
+        "tasks_pos": 2,
+        "tasks_neg": 1,
+        "sign_test_p": 1.0
+      },
+      "CTV glm47flash->glm47flash": {
+        "mean": 0.017543859649122806,
+        "ci95": [
+          0.0,
+          0.05263157894736842
+        ],
+        "n_tasks": 19,
+        "tasks_pos": 1,
+        "tasks_neg": 0,
+        "sign_test_p": 1.0
+      },
+      "CTV glm47flash->devstral": {
+        "mean": -0.03508771929824562,
+        "ci95": [
+          -0.12280701754385966,
+          0.03508771929824561
+        ],
+        "n_tasks": 19,
+        "tasks_pos": 1,
+        "tasks_neg": 2,
+        "sign_test_p": 1.0
+      },
+      "COMBINED FTV": {
+        "mean": -0.02564102564102564,
+        "ci95": [
+          -0.0811965811965812,
+          0.0125
+        ],
+        "n_tasks": 20
+      },
+      "COMBINED CTV": {
+        "mean": -0.008547008547008548,
+        "ci95": [
+          -0.04385964912280702,
+          0.021929824561403508
+        ],
+        "n_tasks": 20
+      },
+      "COMBINED HRG_V0": {
+        "mean": 0.00854700854700855,
+        "ci95": [
+          -0.03418803418803418,
+          0.058333333333333334
+        ],
+        "n_tasks": 20
+      },
+      "COMBINED HRG_note": {
+        "mean": -0.02564102564102564,
+        "ci95": [
+          -0.07499999999999998,
+          0.016666666666666666
+        ],
+        "n_tasks": 20
+      }
+    },
+    "nonhard": {
+      "HRG_V0 devstral->glm47flash": {
+        "mean": -0.043478260869565216,
+        "ci95": [
+          -0.15942028985507245,
+          0.07246376811594202
+        ],
+        "n_tasks": 23,
+        "tasks_pos": 5,
+        "tasks_neg": 6,
+        "sign_test_p": 1.0
+      },
+      "HRG_note devstral->glm47flash": {
+        "mean": 0.014492753623188396,
+        "ci95": [
+          -0.11594202898550723,
+          0.13043478260869568
+        ],
+        "n_tasks": 23,
+        "tasks_pos": 4,
+        "tasks_neg": 3,
+        "sign_test_p": 1.0
+      },
+      "FTV devstral->devstral": {
+        "mean": -0.043478260869565216,
+        "ci95": [
+          -0.18840579710144925,
+          0.10144927536231883
+        ],
+        "n_tasks": 23,
+        "tasks_pos": 5,
+        "tasks_neg": 6,
+        "sign_test_p": 1.0
+      },
+      "FTV devstral->glm47flash": {
+        "mean": -0.11594202898550723,
+        "ci95": [
+          -0.26086956521739135,
+          0.028985507246376805
+        ],
+        "n_tasks": 23,
+        "tasks_pos": 5,
+        "tasks_neg": 8,
+        "sign_test_p": 0.5810546875
+      },
+      "CTV devstral->devstral": {
+        "mean": -0.014492753623188403,
+        "ci95": [
+          -0.14492753623188406,
+          0.13043478260869565
+        ],
+        "n_tasks": 23,
+        "tasks_pos": 4,
+        "tasks_neg": 5,
+        "sign_test_p": 1.0
+      },
+      "CTV devstral->glm47flash": {
+        "mean": 0.04347826086956521,
+        "ci95": [
+          -0.05797101449275362,
+          0.14492753623188404
+        ],
+        "n_tasks": 23,
+        "tasks_pos": 6,
+        "tasks_neg": 4,
+        "sign_test_p": 0.75390625
+      },
+      "HRG_V0 glm47flash->devstral": {
+        "mean": 0.08,
+        "ci95": [
+          -0.02666666666666666,
+          0.2
+        ],
+        "n_tasks": 25,
+        "tasks_pos": 7,
+        "tasks_neg": 4,
+        "sign_test_p": 0.548828125
+      },
+      "HRG_note glm47flash->devstral": {
+        "mean": 0.02666666666666666,
+        "ci95": [
+          -0.05333333333333332,
+          0.09333333333333334
+        ],
+        "n_tasks": 25,
+        "tasks_pos": 5,
+        "tasks_neg": 3,
+        "sign_test_p": 0.7265625
+      },
+      "FTV glm47flash->glm47flash": {
+        "mean": -0.12000000000000002,
+        "ci95": [
+          -0.2666666666666668,
+          0.02666666666666665
+        ],
+        "n_tasks": 25,
+        "tasks_pos": 6,
+        "tasks_neg": 9,
+        "sign_test_p": 0.60723876953125
+      },
+      "FTV glm47flash->devstral": {
+        "mean": -0.06666666666666668,
+        "ci95": [
+          -0.26666666666666666,
+          0.13333333333333333
+        ],
+        "n_tasks": 25,
+        "tasks_pos": 5,
+        "tasks_neg": 9,
+        "sign_test_p": 0.4239501953125
+      },
+      "CTV glm47flash->glm47flash": {
+        "mean": 0.02666666666666668,
+        "ci95": [
+          -0.09333333333333332,
+          0.16000000000000003
+        ],
+        "n_tasks": 25,
+        "tasks_pos": 5,
+        "tasks_neg": 7,
+        "sign_test_p": 0.7744140625
+      },
+      "CTV glm47flash->devstral": {
+        "mean": -0.02666666666666666,
+        "ci95": [
+          -0.14666666666666667,
+          0.10666666666666666
+        ],
+        "n_tasks": 25,
+        "tasks_pos": 4,
+        "tasks_neg": 6,
+        "sign_test_p": 0.75390625
+      },
+      "COMBINED FTV": {
+        "mean": -0.0868055555555556,
+        "ci95": [
+          -0.2093023255813954,
+          0.027777777777777773
+        ],
+        "n_tasks": 30
+      },
+      "COMBINED CTV": {
+        "mean": 0.0069444444444444475,
+        "ci95": [
+          -0.07291666666666667,
+          0.0921985815602837
+        ],
+        "n_tasks": 30
+      },
+      "COMBINED HRG_V0": {
+        "mean": 0.020833333333333343,
+        "ci95": [
+          -0.07246376811594202,
+          0.11111111111111109
+        ],
+        "n_tasks": 30
+      },
+      "COMBINED HRG_note": {
+        "mean": 0.020833333333333325,
+        "ci95": [
+          -0.044444444444444446,
+          0.08695652173913043
+        ],
+        "n_tasks": 30
+      }
+    }
+  },
+  "pilot_v1": {
+    "qwen": {
+      "n_failed": 31,
+      "V0 qwen->qwen": [
+        3,
+        31
+      ],
+      "V0 qwen->devstral": [
+        11,
+        31
+      ],
+      "Repo0 devstral": [
+        12,
+        31
+      ]
+    },
+    "devstral": {
+      "n_failed": 16,
+      "V0 devstral->devstral": [
+        1,
+        16
+      ],
+      "V0 devstral->qwen": [
+        0,
+        16
+      ],
+      "Repo0 qwen": [
+        0,
+        16
+      ]
+    }
+  }
+}

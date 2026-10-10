@@ -1,0 +1,26 @@
+# Pipeline test against scripted fake endpoints (scripts/dev/fake_endpoint.py). NOT an experiment.
+experiment:
+  id: smoke_fake
+  description: infrastructure smoke test with scripted fake model endpoints
+  include:
+    agents: ../agents.yaml
+    benchmark: ../benchmark.yaml
+    budgets: budgets_smoke.yaml
+    paths: ../paths.yaml
+  agents: [qwen, devstral]
+  prompt_version: v0
+  prompts:
+    miniswe_config: ../miniswe/mini_toolcall_v2.0.0.yaml
+    recovery_preamble: ../prompts/recovery_v0.md
+  primary_failure:
+    definition: budget_exhausted_and_unsolved
+  task_selection:
+    seed: 0
+    n_hard: 0
+    n_nonhard: 0
+  runtime:
+    container: apptainer
+    agent_network: none
+    verifier_network: public
+    max_concurrent_per_endpoint: 1
+  infra_retries: 0

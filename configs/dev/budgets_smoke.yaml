@@ -1,0 +1,11 @@
+primary:
+  wallclock_minutes: 3
+  step_limit: 250
+recovery:
+  wallclock_minutes: 3
+  step_limit: 250
+command_timeout_seconds: 20
+max_tokens_per_response: 16384
+model_request_timeout_seconds: 60
+hard_kill_grace_seconds: 60
+evaluator_timeout_seconds: 3000

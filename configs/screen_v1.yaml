@@ -1,0 +1,27 @@
+# Top-level experiment config. Every file referenced here is snapshotted into the run manifest.
+experiment:
+  id: screen_v1
+  description: Screening candidates for a capability-matched pair (D-027); primaries only on the pilot_v1 task list
+  include:
+    agents: agents.yaml
+    benchmark: benchmark.yaml
+    budgets: budgets.yaml
+    paths: paths.yaml
+  agents: [qwen36moe, qwen36dense, nemotron3nano, glm47flash, gptoss120b]   # D-028
+  prompt_version: v0
+  prompts:
+    miniswe_config: miniswe/mini_toolcall_v2.0.0.yaml
+    recovery_preamble: prompts/recovery_v0.md
+  primary_failure:
+    definition: unsolved_any_exit   # D-021
+  task_selection:                      # D-011
+    seed: 20261006
+    n_hard: 0          # D-022
+    n_nonhard: 40
+    task_list: null                    # path to frozen ID list once created
+  runtime:                             # D-002
+    container: apptainer
+    agent_network: none
+    verifier_network: public
+    max_concurrent_per_endpoint: 4    # D-013: identical for every model
+  infra_retries: 1                     # D-012

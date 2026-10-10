@@ -1,0 +1,320 @@
+{
+  "generated_at": "2026-10-10T06:20:39.796+00:00",
+  "experiment": "pilot_v2_r3",
+  "primary_source": "pilot_v2",
+  "sets": {
+    "devstral": {
+      "n_failed": 20,
+      "tasks": [
+        "instance_ansible__ansible-de5858f48dc9e1ce9117034e0d7e76806f420ca8-v1055803c3a812189a1133297f7f5468579283f86",
+        "instance_flipt-io__flipt-524f277313606f8cd29b299617d6565c01642e15",
+        "instance_qutebrowser__qutebrowser-deeb15d6f009b3ca0c3bd503a7cef07462bd16b4-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d",
+        "instance_navidrome__navidrome-874b17b8f614056df0ef021b5d4f977341084185",
+        "instance_qutebrowser__qutebrowser-e70f5b03187bdd40e8bf70f5f3ead840f52d1f42-v02ad04386d5238fe2d1a1be450df257370de4b6a",
+        "instance_internetarchive__openlibrary-6e889f4a733c9f8ce9a9bd2ec6a934413adcedb9-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "instance_internetarchive__openlibrary-a48fd6ba9482c527602bc081491d9e8ae6e8226c-vfa6ff903cb27f336e17654595dd900fa943dcd91",
+        "instance_protonmail__webclients-715dbd4e6999499cd2a576a532d8214f75189116",
+        "instance_gravitational__teleport-eda668c30d9d3b56d9c69197b120b01013611186",
+        "instance_element-hq__element-web-ecfd1736e5dd9808e87911fc264e6c816653e1a9-vnan",
+        "instance_qutebrowser__qutebrowser-c09e1439f145c66ee3af574386e277dd2388d094-v2ef375ac784985212b1805e1d0431dc8f1b3c171",
+        "instance_element-hq__element-web-66d0b318bc6fee0d17b54c1781d6ab5d5d323135-vnan",
+        "instance_future-architect__vuls-ef2be3d6ea4c0a13674aaab08b182eca4e2b9a17-v264a82e2f4818e30f5a25e4da53b27ba119f62b5",
+        "instance_navidrome__navidrome-69e0a266f48bae24a11312e9efbe495a337e4c84",
+        "instance_ansible__ansible-e9e6001263f51103e96e58ad382660df0f3d0e39-v30a923fb5c164d6cd18280c02422f75e611e8fb2",
+        "instance_flipt-io__flipt-c1728053367c753688f114ec26e703c8fdeda125",
+        "instance_flipt-io__flipt-2ca5dfb3513e4e786d2b037075617cccc286d5c3",
+        "instance_future-architect__vuls-ca3f6b1dbf2cd24d1537bfda43e788443ce03a0c",
+        "instance_flipt-io__flipt-e2bd19dafa7166c96b082fb2a59eb54b4be0d778",
+        "instance_future-architect__vuls-e1fab805afcfc92a2a615371d0ec1e667503c254-v264a82e2f4818e30f5a25e4da53b27ba119f62b5"
+      ],
+      "pairs": {
+        "devstral": {
+          "CTV": {
+            "n": 20,
+            "x_and_y": 1,
+            "x_only": 0,
+            "y_only": 0,
+            "neither": 19,
+            "rate_x": 0.05,
+            "rate_y": 0.05,
+            "diff": 0.0,
+            "diff_ci95_wald": [
+              0.0,
+              0.0
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "FTV": {
+            "n": 20,
+            "x_and_y": 1,
+            "x_only": 0,
+            "y_only": 1,
+            "neither": 18,
+            "rate_x": 0.05,
+            "rate_y": 0.1,
+            "diff": -0.05,
+            "diff_ci95_wald": [
+              -0.14551858457912786,
+              0.045518584579127844
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "FTV_note": {
+            "n": 20,
+            "x_and_y": 1,
+            "x_only": 0,
+            "y_only": 1,
+            "neither": 18,
+            "rate_x": 0.05,
+            "rate_y": 0.1,
+            "diff": -0.05,
+            "diff_ci95_wald": [
+              -0.14551858457912786,
+              0.045518584579127844
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "R0": [
+            1,
+            20
+          ],
+          "Rnote": [
+            1,
+            20
+          ],
+          "control": [
+            2,
+            20
+          ]
+        },
+        "glm47flash": {
+          "CTV": {
+            "n": 20,
+            "x_and_y": 1,
+            "x_only": 0,
+            "y_only": 0,
+            "neither": 19,
+            "rate_x": 0.05,
+            "rate_y": 0.05,
+            "diff": 0.0,
+            "diff_ci95_wald": [
+              0.0,
+              0.0
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "FTV": {
+            "n": 20,
+            "x_and_y": 1,
+            "x_only": 0,
+            "y_only": 0,
+            "neither": 19,
+            "rate_x": 0.05,
+            "rate_y": 0.05,
+            "diff": 0.0,
+            "diff_ci95_wald": [
+              0.0,
+              0.0
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "FTV_note": {
+            "n": 20,
+            "x_and_y": 1,
+            "x_only": 0,
+            "y_only": 0,
+            "neither": 19,
+            "rate_x": 0.05,
+            "rate_y": 0.05,
+            "diff": 0.0,
+            "diff_ci95_wald": [
+              0.0,
+              0.0
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "R0": [
+            1,
+            20
+          ],
+          "Rnote": [
+            1,
+            20
+          ],
+          "control": [
+            1,
+            20
+          ],
+          "HRG_decomposition_V0": {
+            "n": 20,
+            "HRG": 0.0,
+            "capability": -0.05,
+            "state": 0.05
+          },
+          "HRG_decomposition_note": {
+            "n": 20,
+            "HRG": 0.0,
+            "capability": -0.05,
+            "state": 0.05
+          }
+        }
+      }
+    },
+    "glm47flash": {
+      "n_failed": 19,
+      "tasks": [
+        "instance_ansible__ansible-de5858f48dc9e1ce9117034e0d7e76806f420ca8-v1055803c3a812189a1133297f7f5468579283f86",
+        "instance_flipt-io__flipt-524f277313606f8cd29b299617d6565c01642e15",
+        "instance_qutebrowser__qutebrowser-deeb15d6f009b3ca0c3bd503a7cef07462bd16b4-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d",
+        "instance_navidrome__navidrome-874b17b8f614056df0ef021b5d4f977341084185",
+        "instance_qutebrowser__qutebrowser-e70f5b03187bdd40e8bf70f5f3ead840f52d1f42-v02ad04386d5238fe2d1a1be450df257370de4b6a",
+        "instance_internetarchive__openlibrary-6e889f4a733c9f8ce9a9bd2ec6a934413adcedb9-ve8c8d62a2b60610a3c4631f5f23ed866bada9818",
+        "instance_internetarchive__openlibrary-a48fd6ba9482c527602bc081491d9e8ae6e8226c-vfa6ff903cb27f336e17654595dd900fa943dcd91",
+        "instance_protonmail__webclients-715dbd4e6999499cd2a576a532d8214f75189116",
+        "instance_gravitational__teleport-eda668c30d9d3b56d9c69197b120b01013611186",
+        "instance_element-hq__element-web-ecfd1736e5dd9808e87911fc264e6c816653e1a9-vnan",
+        "instance_element-hq__element-web-66d0b318bc6fee0d17b54c1781d6ab5d5d323135-vnan",
+        "instance_future-architect__vuls-ef2be3d6ea4c0a13674aaab08b182eca4e2b9a17-v264a82e2f4818e30f5a25e4da53b27ba119f62b5",
+        "instance_navidrome__navidrome-69e0a266f48bae24a11312e9efbe495a337e4c84",
+        "instance_ansible__ansible-e9e6001263f51103e96e58ad382660df0f3d0e39-v30a923fb5c164d6cd18280c02422f75e611e8fb2",
+        "instance_flipt-io__flipt-c1728053367c753688f114ec26e703c8fdeda125",
+        "instance_flipt-io__flipt-2ca5dfb3513e4e786d2b037075617cccc286d5c3",
+        "instance_future-architect__vuls-ca3f6b1dbf2cd24d1537bfda43e788443ce03a0c",
+        "instance_flipt-io__flipt-e2bd19dafa7166c96b082fb2a59eb54b4be0d778",
+        "instance_future-architect__vuls-e1fab805afcfc92a2a615371d0ec1e667503c254-v264a82e2f4818e30f5a25e4da53b27ba119f62b5"
+      ],
+      "pairs": {
+        "devstral": {
+          "CTV": {
+            "n": 19,
+            "x_and_y": 1,
+            "x_only": 1,
+            "y_only": 1,
+            "neither": 16,
+            "rate_x": 0.10526315789473684,
+            "rate_y": 0.10526315789473684,
+            "diff": 0.0,
+            "diff_ci95_wald": [
+              -0.14588729380269821,
+              0.14588729380269821
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "FTV": {
+            "n": 19,
+            "x_and_y": 1,
+            "x_only": 1,
+            "y_only": 1,
+            "neither": 16,
+            "rate_x": 0.10526315789473684,
+            "rate_y": 0.10526315789473684,
+            "diff": 0.0,
+            "diff_ci95_wald": [
+              -0.14588729380269821,
+              0.14588729380269821
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "FTV_note": {
+            "n": 19,
+            "x_and_y": 1,
+            "x_only": 1,
+            "y_only": 1,
+            "neither": 16,
+            "rate_x": 0.10526315789473684,
+            "rate_y": 0.10526315789473684,
+            "diff": 0.0,
+            "diff_ci95_wald": [
+              -0.14588729380269821,
+              0.14588729380269821
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "R0": [
+            2,
+            19
+          ],
+          "Rnote": [
+            2,
+            19
+          ],
+          "control": [
+            2,
+            19
+          ],
+          "HRG_decomposition_V0": {
+            "n": 19,
+            "HRG": 0.10526315789473684,
+            "capability": 0.05263157894736842,
+            "state": 0.05263157894736842
+          },
+          "HRG_decomposition_note": {
+            "n": 19,
+            "HRG": 0.10526315789473684,
+            "capability": 0.05263157894736842,
+            "state": 0.05263157894736842
+          }
+        },
+        "glm47flash": {
+          "CTV": {
+            "n": 19,
+            "x_and_y": 0,
+            "x_only": 0,
+            "y_only": 0,
+            "neither": 19,
+            "rate_x": 0.0,
+            "rate_y": 0.0,
+            "diff": 0.0,
+            "diff_ci95_wald": [
+              0.0,
+              0.0
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "FTV": {
+            "n": 19,
+            "x_and_y": 0,
+            "x_only": 0,
+            "y_only": 1,
+            "neither": 18,
+            "rate_x": 0.0,
+            "rate_y": 0.05263157894736842,
+            "diff": -0.05263157894736842,
+            "diff_ci95_wald": [
+              -0.15303810065777723,
+              0.047774942763040396
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "FTV_note": {
+            "n": 19,
+            "x_and_y": 0,
+            "x_only": 0,
+            "y_only": 1,
+            "neither": 18,
+            "rate_x": 0.0,
+            "rate_y": 0.05263157894736842,
+            "diff": -0.05263157894736842,
+            "diff_ci95_wald": [
+              -0.15303810065777723,
+              0.047774942763040396
+            ],
+            "mcnemar_exact_p": 1.0
+          },
+          "R0": [
+            0,
+            19
+          ],
+          "Rnote": [
+            0,
+            19
+          ],
+          "control": [
+            1,
+            19
+          ]
+        }
+      }
+    }
+  }
+}

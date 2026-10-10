@@ -1,0 +1,9 @@
+# All storage locations. Override with environment variables; nothing is hard-coded in Python.
+paths:
+  runs_root: ${FC_RUNS_ROOT:-${FC_PROJECT_ROOT}/runs}            # durable artifacts (GPFS)
+  results_root: ${FC_RESULTS_ROOT:-${FC_PROJECT_ROOT}/results}
+  benchmark_repo: ${FC_BENCH_REPO:-/path/to/scratch/fc_vendor/SWE-bench_Pro-os}
+  sif_cache: ${FC_SIF_CACHE:-/path/to/scratch/fc_cache/sif}
+  apptainer_cache: ${APPTAINER_CACHEDIR:-/path/to/scratch/fc_cache/apptainer}
+  work_root: ${FC_WORK_ROOT:-${TMPDIR:-/tmp}/fc_work}          # node-local scratch for live sandboxes
+  hf_home: ${HF_HOME:-/path/to/scratch/fc_cache/hf}

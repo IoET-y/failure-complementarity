@@ -1,0 +1,13 @@
+# Identical for every model and condition (decision D-007).
+primary:
+  wallclock_minutes: 30
+  step_limit: 250          # mini-SWE-agent SWE-bench default; whichever limit is hit first ends the run
+recovery:
+  wallclock_minutes: 30
+  step_limit: 250
+command_timeout_seconds: 60
+max_tokens_per_response: 16384
+model_request_timeout_seconds: 900
+# Hard kill if a single model call / command overruns the wall-clock check (checked between steps).
+hard_kill_grace_seconds: 300
+evaluator_timeout_seconds: 3000   # V2 task.toml [verifier] timeout_sec

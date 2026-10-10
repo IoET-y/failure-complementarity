@@ -1,0 +1,13 @@
+# SWE-bench Pro V2, pinned (decision D-001).
+benchmark:
+  name: swe_bench_pro_v2
+  release_tag: v2.0.0
+  repo_url: https://github.com/scaleapi/SWE-bench_Pro-os
+  repo_commit: 66f92766bba642462d4bbe5479e83f91f9211862
+  tasks_subdir: v2/tasks
+  hard_ids_file: v2/hard51_ids.txt
+  checksums_file: v2/SHA256SUMS
+  official_mini_config: v2/tooling/configs/mini_toolcall.yaml
+  image_template: ghcr.io/scaleapi/swe-bench_pro-v2:{instance_id}
+  hf_dataset: ScaleAI/SWE-bench_Pro
+  hf_revision: 2d52cb3df914a3fcf80c7f66738b3a88ae37fc50   # reference only

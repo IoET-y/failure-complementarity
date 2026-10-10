@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.venv/
+# raw run directories (container snapshots, full trajectories) are large and are not published
+runs/*
+!runs/.gitkeep
+*.sif
+*.tar.zst

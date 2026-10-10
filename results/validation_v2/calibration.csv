@@ -1,0 +1,3 @@
+task_id,subset,devstral_solved,devstral_time,devstral_tokens,devstral_steps,devstral_status,devstral_exit_reason,devstral_primary_failure,glm47flash_solved,glm47flash_time,glm47flash_tokens,glm47flash_steps,glm47flash_status,glm47flash_exit_reason,glm47flash_primary_failure
+instance_NodeBB__NodeBB-8168c6c40707478f71b8af60300830fe554c778c-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e,hard,0,262.3,899155,36,UNSOLVED,SUBMITTED,1,0,159.3,1387543,59,UNSOLVED,SUBMITTED,1
+instance_ansible__ansible-c1f2df47538b884a43320f53e787197793b105e8-v906c969b551b346ef54a2c0b41e04f632b7b73c2,hard,0,233.0,926349,36,UNSOLVED,SUBMITTED,1,0,391.3,8753142,170,UNSOLVED,SUBMITTED,1

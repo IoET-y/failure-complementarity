@@ -1,0 +1,356 @@
+{
+  "experiments": [
+    "pilot_v2",
+    "pilot_v2_r2",
+    "pilot_v2_r3"
+  ],
+  "subset": "hard",
+  "sets": {
+    "devstral": {
+      "n_tasks": 20,
+      "rates": {
+        "V0 devstral\u2192devstral (same)": {
+          "per_replicate": [
+            "2/20",
+            "1/20",
+            "1/20"
+          ],
+          "pooled": 0.06666666666666667,
+          "n_runs": 60
+        },
+        "note devstral\u2192devstral (same)": {
+          "per_replicate": [
+            "1/20",
+            "2/20",
+            "1/20"
+          ],
+          "pooled": 0.06666666666666667,
+          "n_runs": 60
+        },
+        "Repo0 devstral (same)": {
+          "per_replicate": [
+            "1/20",
+            "2/20",
+            "2/20"
+          ],
+          "pooled": 0.08333333333333333,
+          "n_runs": 60
+        },
+        "V0 devstral\u2192glm47flash": {
+          "per_replicate": [
+            "1/20",
+            "0/20",
+            "1/20"
+          ],
+          "pooled": 0.03333333333333333,
+          "n_runs": 60
+        },
+        "note devstral\u2192glm47flash": {
+          "per_replicate": [
+            "0/20",
+            "0/20",
+            "1/20"
+          ],
+          "pooled": 0.016666666666666666,
+          "n_runs": 60
+        },
+        "Repo0 glm47flash": {
+          "per_replicate": [
+            "1/20",
+            "2/20",
+            "1/20"
+          ],
+          "pooled": 0.06666666666666667,
+          "n_runs": 60
+        }
+      },
+      "contrasts": {
+        "HRG devstral\u2192glm47flash (V0)": {
+          "mean": -0.03333333333333333,
+          "ci95": [
+            -0.08333333333333333,
+            0.0
+          ],
+          "n_tasks": 20,
+          "pos": 0,
+          "neg": 2,
+          "sign_p": 0.5,
+          "per_replicate": [
+            "-0.05",
+            "-0.05",
+            "+0.00"
+          ]
+        },
+        "HRG devstral\u2192glm47flash (note)": {
+          "mean": -0.05,
+          "ci95": [
+            -0.16666666666666666,
+            0.03333333333333333
+          ],
+          "n_tasks": 20,
+          "pos": 1,
+          "neg": 2,
+          "sign_p": 1.0,
+          "per_replicate": [
+            "-0.05",
+            "-0.10",
+            "+0.00"
+          ]
+        },
+        "FTV devstral\u2192devstral (same)": {
+          "mean": -0.01666666666666667,
+          "ci95": [
+            -0.06666666666666668,
+            0.03333333333333333
+          ],
+          "n_tasks": 20,
+          "pos": 1,
+          "neg": 2,
+          "sign_p": 1.0,
+          "per_replicate": [
+            "+0.05",
+            "-0.05",
+            "-0.05"
+          ]
+        },
+        "FTV devstral\u2192glm47flash": {
+          "mean": -0.03333333333333334,
+          "ci95": [
+            -0.1,
+            0.0
+          ],
+          "n_tasks": 20,
+          "pos": 0,
+          "neg": 1,
+          "sign_p": 1.0,
+          "per_replicate": [
+            "+0.00",
+            "-0.10",
+            "+0.00"
+          ]
+        },
+        "CTV devstral\u2192devstral (same)": {
+          "mean": 0.0,
+          "ci95": [
+            -0.05,
+            0.05
+          ],
+          "n_tasks": 20,
+          "pos": 1,
+          "neg": 1,
+          "sign_p": 1.0,
+          "per_replicate": [
+            "-0.05",
+            "+0.05",
+            "+0.00"
+          ]
+        },
+        "CTV devstral\u2192glm47flash": {
+          "mean": -0.016666666666666666,
+          "ci95": [
+            -0.05,
+            0.0
+          ],
+          "n_tasks": 20,
+          "pos": 0,
+          "neg": 1,
+          "sign_p": 1.0,
+          "per_replicate": [
+            "-0.05",
+            "+0.00",
+            "+0.00"
+          ]
+        },
+        "capability glm47flash vs devstral on F_devstral": {
+          "mean": -0.016666666666666666,
+          "ci95": [
+            -0.11666666666666667,
+            0.08333333333333334
+          ],
+          "n_tasks": 20,
+          "pos": 1,
+          "neg": 2,
+          "sign_p": 1.0,
+          "per_replicate": [
+            "+0.00",
+            "+0.00",
+            "-0.05"
+          ]
+        }
+      }
+    },
+    "glm47flash": {
+      "n_tasks": 19,
+      "rates": {
+        "V0 glm47flash\u2192devstral": {
+          "per_replicate": [
+            "1/19",
+            "1/19",
+            "2/19"
+          ],
+          "pooled": 0.07017543859649122,
+          "n_runs": 57
+        },
+        "note glm47flash\u2192devstral": {
+          "per_replicate": [
+            "0/19",
+            "0/19",
+            "2/19"
+          ],
+          "pooled": 0.03508771929824561,
+          "n_runs": 57
+        },
+        "Repo0 devstral": {
+          "per_replicate": [
+            "1/19",
+            "1/19",
+            "2/19"
+          ],
+          "pooled": 0.07017543859649122,
+          "n_runs": 57
+        },
+        "V0 glm47flash\u2192glm47flash (same)": {
+          "per_replicate": [
+            "0/19",
+            "1/19",
+            "0/19"
+          ],
+          "pooled": 0.017543859649122806,
+          "n_runs": 57
+        },
+        "note glm47flash\u2192glm47flash (same)": {
+          "per_replicate": [
+            "2/19",
+            "0/19",
+            "0/19"
+          ],
+          "pooled": 0.03508771929824561,
+          "n_runs": 57
+        },
+        "Repo0 glm47flash (same)": {
+          "per_replicate": [
+            "1/19",
+            "2/19",
+            "1/19"
+          ],
+          "pooled": 0.07017543859649122,
+          "n_runs": 57
+        }
+      },
+      "contrasts": {
+        "HRG glm47flash\u2192devstral (V0)": {
+          "mean": 0.05263157894736842,
+          "ci95": [
+            0.0,
+            0.14035087719298248
+          ],
+          "n_tasks": 19,
+          "pos": 2,
+          "neg": 0,
+          "sign_p": 0.5,
+          "per_replicate": [
+            "+0.05",
+            "+0.00",
+            "+0.11"
+          ]
+        },
+        "HRG glm47flash\u2192devstral (note)": {
+          "mean": 0.0,
+          "ci95": [
+            -0.05263157894736842,
+            0.05263157894736842
+          ],
+          "n_tasks": 19,
+          "pos": 1,
+          "neg": 1,
+          "sign_p": 1.0,
+          "per_replicate": [
+            "-0.11",
+            "+0.00",
+            "+0.11"
+          ]
+        },
+        "FTV glm47flash\u2192glm47flash (same)": {
+          "mean": -0.05263157894736842,
+          "ci95": [
+            -0.14035087719298248,
+            0.0
+          ],
+          "n_tasks": 19,
+          "pos": 0,
+          "neg": 2,
+          "sign_p": 0.5,
+          "per_replicate": [
+            "-0.05",
+            "-0.05",
+            "-0.05"
+          ]
+        },
+        "FTV glm47flash\u2192devstral": {
+          "mean": 2.921639538487254e-18,
+          "ci95": [
+            -0.14035087719298245,
+            0.12280701754385966
+          ],
+          "n_tasks": 19,
+          "pos": 2,
+          "neg": 1,
+          "sign_p": 1.0,
+          "per_replicate": [
+            "+0.00",
+            "+0.00",
+            "+0.00"
+          ]
+        },
+        "CTV glm47flash\u2192glm47flash (same)": {
+          "mean": 0.017543859649122806,
+          "ci95": [
+            0.0,
+            0.05263157894736842
+          ],
+          "n_tasks": 19,
+          "pos": 1,
+          "neg": 0,
+          "sign_p": 1.0,
+          "per_replicate": [
+            "+0.11",
+            "-0.05",
+            "+0.00"
+          ]
+        },
+        "CTV glm47flash\u2192devstral": {
+          "mean": -0.03508771929824562,
+          "ci95": [
+            -0.12280701754385966,
+            0.03508771929824561
+          ],
+          "n_tasks": 19,
+          "pos": 1,
+          "neg": 2,
+          "sign_p": 1.0,
+          "per_replicate": [
+            "-0.05",
+            "-0.05",
+            "+0.00"
+          ]
+        },
+        "capability devstral vs glm47flash on F_glm47flash": {
+          "mean": 0.0,
+          "ci95": [
+            -0.10526315789473684,
+            0.10526315789473684
+          ],
+          "n_tasks": 19,
+          "pos": 1,
+          "neg": 1,
+          "sign_p": 1.0,
+          "per_replicate": [
+            "+0.00",
+            "-0.05",
+            "+0.05"
+          ]
+        }
+      }
+    }
+  }
+}

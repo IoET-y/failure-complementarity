@@ -1,0 +1,7 @@
+{
+  "purpose": "D-017 pipeline validation (held out)",
+  "task_ids": [
+    "instance_NodeBB__NodeBB-8168c6c40707478f71b8af60300830fe554c778c-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+    "instance_ansible__ansible-c1f2df47538b884a43320f53e787197793b105e8-v906c969b551b346ef54a2c0b41e04f632b7b73c2"
+  ]
+}

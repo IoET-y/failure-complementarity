@@ -1,0 +1,150 @@
+{
+  "pairs": {
+    "devstral->devstral": {
+      "primary": "devstral",
+      "rescuer": "devstral",
+      "n_failed": 2,
+      "R": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576280471103807
+        ],
+        "n_infra_or_missing": 0
+      }
+    },
+    "devstral->glm47flash": {
+      "primary": "devstral",
+      "rescuer": "glm47flash",
+      "n_failed": 2,
+      "R": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576280471103807
+        ],
+        "n_infra_or_missing": 0
+      },
+      "HRG": {
+        "n": 2,
+        "x_and_y": 0,
+        "x_only": 0,
+        "y_only": 0,
+        "neither": 2,
+        "rate_x": 0.0,
+        "rate_y": 0.0,
+        "diff": 0.0,
+        "diff_ci95_wald": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      "control_repo0": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576280471103807
+        ]
+      },
+      "FTV": {
+        "n": 2,
+        "x_and_y": 0,
+        "x_only": 0,
+        "y_only": 0,
+        "neither": 2,
+        "rate_x": 0.0,
+        "rate_y": 0.0,
+        "diff": 0.0,
+        "diff_ci95_wald": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "glm47flash->devstral": {
+      "primary": "glm47flash",
+      "rescuer": "devstral",
+      "n_failed": 2,
+      "R": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576280471103807
+        ],
+        "n_infra_or_missing": 0
+      },
+      "HRG": {
+        "n": 2,
+        "x_and_y": 0,
+        "x_only": 0,
+        "y_only": 0,
+        "neither": 2,
+        "rate_x": 0.0,
+        "rate_y": 0.0,
+        "diff": 0.0,
+        "diff_ci95_wald": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      "control_repo0": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576280471103807
+        ]
+      },
+      "FTV": {
+        "n": 2,
+        "x_and_y": 0,
+        "x_only": 0,
+        "y_only": 0,
+        "neither": 2,
+        "rate_x": 0.0,
+        "rate_y": 0.0,
+        "diff": 0.0,
+        "diff_ci95_wald": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "glm47flash->glm47flash": {
+      "primary": "glm47flash",
+      "rescuer": "glm47flash",
+      "n_failed": 2,
+      "R": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576280471103807
+        ],
+        "n_infra_or_missing": 0
+      }
+    }
+  },
+  "failed_devstral": [
+    "instance_NodeBB__NodeBB-8168c6c40707478f71b8af60300830fe554c778c-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+    "instance_ansible__ansible-c1f2df47538b884a43320f53e787197793b105e8-v906c969b551b346ef54a2c0b41e04f632b7b73c2"
+  ],
+  "failed_glm47flash": [
+    "instance_NodeBB__NodeBB-8168c6c40707478f71b8af60300830fe554c778c-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+    "instance_ansible__ansible-c1f2df47538b884a43320f53e787197793b105e8-v906c969b551b346ef54a2c0b41e04f632b7b73c2"
+  ]
+}

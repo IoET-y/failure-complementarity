@@ -1,0 +1,33 @@
+# Top-level experiment config. Every file referenced here is snapshotted into the run manifest.
+experiment:
+  id: validation_v2
+  description: Pipeline validation for pilot_v2 (Devstral + GLM-4.7-Flash, all conditions) on held-out tasks (D-017)
+  include:
+    agents: agents.yaml
+    benchmark: benchmark.yaml
+    budgets: budgets.yaml
+    paths: paths.yaml
+  agents: [devstral, glm47flash]
+  prompt_version: v0
+  prompts:
+    miniswe_config: miniswe/mini_toolcall_v2.0.0.yaml
+    recovery_preamble: prompts/recovery_v0.md
+    handoff_request: prompts/handoff_request_v1.md
+    recovery_note_preamble: prompts/recovery_note_v1.md
+  primary_failure:
+    definition: unsolved_any_exit   # D-021
+  task_selection:                      # D-011
+    seed: 20261006
+    n_hard: 20         # D-034
+    n_nonhard: 40
+    task_list: null                    # path to frozen ID list once created
+  runtime:                             # D-002
+    container: apptainer
+    agent_network: none
+    verifier_network: public
+    max_concurrent_per_endpoint: 4    # D-013: identical for every model
+  infra_retries: 1                     # D-012
+  conditions:                          # D-034: per primary failure of A, for B in {A, other}
+    v0: true                           #   recovery_A_to_B
+    note: true                         #   recovery_note_A_to_B (+ handoff note by A)
+    controls: both                     #   control_B_repo0 for B = A and B != A

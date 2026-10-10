@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code or the data, please cite it as below."
+title: "Failure-conditioned recovery between coding agents: a controlled pilot on SWE-bench Pro V2"
+type: software
+authors:
+  - family-names: Yang
+    given-names: Di
+    email: dyang06@wm.edu
+    affiliation: "William & Mary"
+date-released: 2026-10-10
+license: MIT
+repository-code: "https://github.com/IoET-y/failure-complementarity"
+keywords: [coding agents, SWE-bench Pro, multi-agent, failure recovery, evaluation]
